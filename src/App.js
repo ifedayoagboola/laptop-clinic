@@ -1,11 +1,15 @@
-import HomePage from "./pages/Home";
-import "./App.scss";
+import React from "react";
+import Header from "./components/Header";
+import Homepage from "./pages/Homepage";
+import "./default.scss";
 
 function App() {
   return (
     <div className="App">
-      <div className="sidebar"></div>
-      <div className="main-content"></div>
+      <Header />
+      <div className="main">
+        <Homepage />
+      </div>
     </div>
   );
 }
