@@ -1,0 +1,125 @@
+.section {
+  padding: 5rem 0;
+}
+
+.category {
+  .title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.category-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.category-box {
+  position: relative;
+  border-radius: 0.5rem;
+  height: 25rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.category-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.4) 30%,
+    transparent
+  );
+  z-index: 2;
+  img {
+    height: 27rem;
+    width: 100%;
+    /* transform: scale(1); */
+    transition: all 500ms linear;
+  }
+
+  .category-box:hover img {
+    transform: scale(1.1);
+  }
+  .content {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: var(--white);
+    z-index: 4;
+    h2 {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    a {
+      display: inline-block;
+      color: var(--white);
+      text-transform: uppercase;
+      padding: 0.7rem 1.3rem;
+      border: 1px solid var(--white);
+      transition: all 300ms linear;
+    }
+    .category-box:hover a {
+      border: 1px solid var(--black);
+      background-color: var(--black);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .category-box {
+    .content {
+      h2 {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+      a {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .category-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .category-box {
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .category-center {
+    grid-template-columns: 1fr;
+  }
+
+  .category-box {
+    height: 20rem;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .category-box {
+    .content {
+      top: 20%;
+    }
+  }
+}

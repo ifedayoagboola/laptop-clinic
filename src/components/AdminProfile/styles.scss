@@ -1,0 +1,30 @@
+.admin-profile {
+  flex: 1;
+  text-align: left;
+  padding: 0 5rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.name {
+  display: flex;
+  gap: 1rem;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #201568;
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  margin: 1rem 0;
+  > * {
+    padding: 0.5rem 0;
+  }
+}

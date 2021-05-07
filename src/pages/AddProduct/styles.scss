@@ -1,0 +1,39 @@
+.container {
+  padding: 0 3rem;
+}
+
+.title {
+  padding: 3rem 0;
+  line-height: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  label,
+  input,
+  select {
+    padding: 0.3rem 0;
+    width: 64%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  label {
+    margin-top: 1rem;
+  }
+  input,
+  select {
+    border: none;
+    border-bottom: 1px solid #201568;
+    outline: none;
+  }
+  select {
+    margin-top: 2rem;
+  }
+  h3 {
+    padding: 2rem 0;
+  }
+}

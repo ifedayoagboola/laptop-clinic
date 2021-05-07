@@ -1,0 +1,24 @@
+.admin-container {
+  padding: 3rem;
+  max-width: 1300px;
+}
+.admin-content {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+.admin-products {
+  flex: 2;
+}
+.admin-header {
+  display: flex;
+  gap: 2rem;
+}
+
+.product-list {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
